@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Register</title>
 </head>
 <body>
-
+<div style="text-align: center; height: 100%; width: 100%; padding: 100px">
 <h1>Register Form</h1>
 
 <form action="">
+
     {% csrf_token %}
+    {{ reg_form.as_p }}
     <input type="submit" name="LA" value="Register">
 
 </form>
 
-
+</div>
 </body>
 </html>
