@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>members</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+<h1 class="opener">members page</h1>
+
+<form action="" method="POST">
+
+    {% csrf_token %}
+    {{ reg_members_form.as_p }}
+
+    <input style="padding: 10px; border-radius: 10px; height: 50px; margin-top: 20px" class="badge-dark" type="submit" name="members" value="Registermember">
+
+
+</form>
+
+{% if submit_members == "Registermember" %}
+
+    {{ name }}
+    {{ age }}
+    {{ phone }}
+    {{ city }}
+    {{ country }}
+
+{% endif %}
+
+</div>
+
+<div class="col-sm-4"></div>
+
+</div>
+</div>
+</body>
+</html>
